@@ -26,3 +26,11 @@
 .fa-xmark{
     cursor: pointer;
 }
+
+.text-center{
+    text-align: center;
+}
+
+.container input, .container button{
+    padding: 10px;
+}

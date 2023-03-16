@@ -18,6 +18,11 @@
                         <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
                     </li>
                 </ul>
+                <div class="text-center">
+                    <input type="text" placeholder="Aggiungi cose da fare" v-model="newToDo">
+                    <button @click="addToDo">Aggiungi</button>
+                </div>
+                
             </div>
         </div>
 
