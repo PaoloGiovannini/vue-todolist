@@ -14,7 +14,7 @@
             <div class="container">
                 <ul>
                     <li v-for="(element, index) in toDoList" >
-                        <span :class="element.done == true ? 'line-trough' : ''">{{element.text}}</span>
+                        <span :class="element.done == true ? 'line-trough' : ''" @click="invertTrueFalse(element)">{{element.text}}</span>
                         <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
                     </li>
                 </ul>
