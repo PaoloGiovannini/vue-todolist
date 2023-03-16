@@ -15,9 +15,14 @@ const { createApp } = Vue
             {
                 text:'Giocare a pallone',
                 done:false
-            },
+            }
             
         ]
       }
+    },
+    methods:{
+        removeToDo(index){
+            this.toDoList.splice(index, 1);
+        }
     }
   }).mount('#app')
