@@ -11,19 +11,28 @@
     <body>
 
         <div id="app">
-            <div class="container">
-                <ul>
-                    <li v-for="(element, index) in toDoList" >
-                        <span :class="element.done == true ? 'line-trough' : ''" @click="invertTrueFalse(element)">{{element.text}}</span>
-                        <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
-                    </li>
-                </ul>
-                <div class="text-center">
-                    <input type="text" placeholder="Aggiungi cose da fare" v-model="newToDo" @keyup.enter="addToDo">
-                    <button @click="addToDo">Aggiungi</button>
+            <header>
+                <div class="container">
+                    <h1>To Do list</h1>
                 </div>
-                
-            </div>
+            </header>
+            <main>
+                <div class="container">
+                    <ul v-if="toDoList.length > 0">
+                        <li v-for="(element, index) in toDoList" >
+                            <span :class="element.done == true ? 'line-trough' : ''" @click="invertTrueFalse(element)">{{element.text}}</span>
+                            <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
+                        </li>
+                    </ul>
+                    <h2 v-else>La tua lista è vuota</h2>
+                    <div class="text-center">
+                        <input type="text" placeholder="Aggiungi cose da fare" v-model="newToDo" @keyup.enter="addToDo">
+                        <button @click="addToDo">Aggiungi</button>
+                    </div>
+                    
+                </div>
+            </main>
+            
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
