@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.container li{
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+}
+.container span{
+    flex-grow: 1;
+}
+
+.line-trough{
+    text-decoration: line-through;
+}
