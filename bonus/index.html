@@ -28,6 +28,7 @@
                     <div class="text-center">
                         <input type="text" placeholder="Aggiungi cose da fare" v-model="newToDo" @keyup.enter="addToDo">
                         <button @click="addToDo">Aggiungi</button>
+                        <h3 v-if="error">Devi inserire almeno 5 caratteri!</h3>
                     </div>
                     
                 </div>

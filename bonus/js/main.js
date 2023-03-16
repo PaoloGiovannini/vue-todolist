@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        error: false,
         newToDo: '',
         toDoList:[
             {
@@ -26,9 +27,12 @@ const { createApp } = Vue
             this.toDoList.splice(index, 1);
         },
         addToDo(){
-            if(this.newToDo != ''){
+            if(this.newToDo.length >= 5){
             this.toDoList.push({text: this.newToDo, done: false});
             this.newToDo = '';
+            this.error = false;
+            } else{
+              this.error = true
             }
         },
         invertTrueFalse(element){
