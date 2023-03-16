@@ -26,8 +26,10 @@ const { createApp } = Vue
             this.toDoList.splice(index, 1);
         },
         addToDo(){
-            this.toDoList.push({text: this.newToDo, done: false})
-            this.newToDo = ''
+            if(this.newToDo != ''){
+            this.toDoList.push({text: this.newToDo, done: false});
+            this.newToDo = '';
+            }
         }
     }
   }).mount('#app')
